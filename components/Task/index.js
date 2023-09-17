@@ -6,6 +6,7 @@ import Stats from "./Stats";
 const Task = () => {
   const [outputArr, setOutputArr] = useState([]);
   const [taskRunning, setTaskRunning] = useState(false);
+  const [userObject, setUserObject] = useState([]);
 
   const establishColor = (color, message = "none") => {
     let returnColor = "";
@@ -98,6 +99,8 @@ const Task = () => {
         establishColor={establishColor}
         taskRunning={taskRunning}
         reset={reset}
+        setUserObject={setUserObject}
+        userObject={userObject}
       />
       <Output outputArr={outputArr} establishColor={establishColor} />
       <Stats outputArr={outputArr} />
